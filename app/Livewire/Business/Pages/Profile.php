@@ -30,6 +30,6 @@ class Profile extends Component
 
     public function render()
     {
-        return view('livewire.business.pages.profile')->layout('layouts.business');;
+        return view('livewire.business.pages.profile')->layout('layouts.business');
     }
 }

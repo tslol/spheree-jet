@@ -7,7 +7,7 @@
         </x-slot>
 
         <x-validation-errors class="mb-4" />
-
+        @if(env('REGISTRATION') === true)
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
@@ -58,5 +58,9 @@
                 </x-button>
             </div>
         </form>
+        @else
+            <div class="mx-auto w-full text-2xl font-semibold text-center">Registrations Are Closed</div>
+
+            @endif
     </x-authentication-card>
 @endsection

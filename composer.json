@@ -8,6 +8,7 @@
         "php": "^8.1",
         "baril/sqlout": "^5.0",
         "codeat3/blade-simple-icons": "^3.6",
+        "graham-campbell/markdown": "^15.1",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^10.10",
         "laravel/jetstream": "^4.2",

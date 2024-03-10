@@ -12,7 +12,7 @@
 
                     <img src="{{ $logo }}" style="width:400px;height:150px;" class="mx-auto">
 
-                        s             </div>
+                                     </div>
             </div>
 
             <div class="business-images mx-auto mt-10">

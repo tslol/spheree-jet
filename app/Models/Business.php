@@ -29,6 +29,7 @@ class Business extends Model
         'social_media',
         'website',
         'rating',
+        'in_review',
     ];
 
     protected $appends = [

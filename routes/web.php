@@ -12,6 +12,8 @@ use App\Livewire\Business\Pages\Products as BusinessProducts;
 use App\Livewire\Business\Pages\Team as BusinessTeam;
 use App\Livewire\Business\Pages\Profile as BusinessProfile;
 use App\Livewire\Business\Pages\Integrations as BusinessIntegrations;
+use App\Livewire\Business\Pages\SalesManagement as BusinessSalesManagement;
+use App\Livewire\Business\Pages\Create as BusinessCreate;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,13 @@ Route::get('/p/{id}', ProfilePage::class)->name('profile');
 
 Route::get('/search', Search::class)->name('search');
 
+Route::get('/c/{id}', function($id) {
+    return redirect('/search?cat='. $id);
+})->name('category');
+
+Route::get('a/new', BusinessCreate::class)->name('business.create');
+
+Route::get('/compare/{idOne}/{idTwo}', \App\Livewire\BusinessCompare::class)->name('compare');
 
 Route::middleware([
     'auth:sanctum',
@@ -71,10 +80,10 @@ Route::middleware([
 
         Route::get('a/{id}/integrations', BusinessIntegrations::class)->name('business.page.integrations');
 
+        Route::get('a/{id}/sales-management', BusinessSalesManagement::class)->name('business.page.salesmanagement');
+
     });
 
-    Route::get('a/new', function () {
-        // Nothing Yet
-    })->name('business.create');
+
 
 });

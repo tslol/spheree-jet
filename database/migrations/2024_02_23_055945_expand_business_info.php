@@ -22,6 +22,7 @@ return new class extends Migration
             $table->json('social_media')->nullable();
             $table->string('website')->nullable();
             $table->integer('rating')->nullable();
+            $table->integer('in_review')->default(1);
         });
     }
 
